@@ -6,7 +6,7 @@ export default function HomePage(props) {
   const [slugName, setSlugName] = useState("");
   useEffect(() => {
     props.slug && setSlugName(props.slug);
-  });
+  }, [props.slug]);
   //console.log(slugName);
   const baseUrl = `https://api.edyoda.com/v1/blog/${slugName}`;
   //const baseUrl = `https://api.edyoda.com/v1/blog/cloud-computing/`;
@@ -34,15 +34,8 @@ export default function HomePage(props) {
         <h3>Loading...</h3>
       ) : (
         apiDataArr.map((item, pos) => {
-          const {
-            authorname,
-            description,
-            id,
-            posted_on,
-            slug,
-            small_image,
-            title,
-          } = item;
+          const { authorname, description, id, posted_on, small_image, title } =
+            item;
           //console.log(slug);
           let dateString = `${posted_on.substring(8, 10)}-${
             monthArr[parseInt(posted_on.substring(5, 7)) - 1]

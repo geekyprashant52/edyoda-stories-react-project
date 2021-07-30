@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import useFetchApi from "../../Custom Hooks/useFetchApi";
 import classes from "./CategoriesPage.module.css";
 

@@ -1,5 +1,4 @@
 import React from "react";
-import edyodaLogo from "./edyoda-logo.png";
 import classes from "./TopBar.module.css";
 
 export default function TopBar() {

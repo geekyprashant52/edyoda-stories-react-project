@@ -19,7 +19,7 @@ export default function TopBar() {
         <div className={classes.paraWrapper}>
           EdYoda is free learning and knowledge
           <br />
-          sharing platform for techies
+          sharing platform for techies.
         </div>
         <div className={classes.btnWrapper}>
           <button>Go To Main Website</button>
